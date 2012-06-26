@@ -1,0 +1,172 @@
+﻿$darkorange: rgb(236,113,27);
+$lightorange: rgb(251,175,65);
+$witheorange: #FFF5EF;
+
+@mixin ui-button {
+    padding: .5em;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 1em;
+	font-size: 12pt;
+    background: $darkorange; /* old browsers */
+    background: -moz-linear-gradient(top, $lightorange 0%, $darkorange 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$lightorange), color-stop(100%,$darkorange)); /* webkit */
+    
+    border: solid 1px #FBB887;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+
+    -webkit-box-shadow: 1px 1px 5px #888;
+    -moz-box-shadow: 1px 1px 5px #888;
+    box-shadow: 1px 1px 5px #888;
+}
+body {
+    font-family: Arial, Sans-Serif;
+    font-size: 62.5%;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+#wrap {
+    width: 100em;
+    margin: 0 auto;
+    position: relative;
+}
+
+#header {
+    background-image: url(logo-small.png);
+    background-position: center .5em;
+    background-repeat: no-repeat;
+    height: 21em;
+}
+
+#main {
+    width: 46em;
+    color: #444;
+    margin-left: 21em;
+    min-height: 20em;
+}
+
+#nav {
+    position: absolute;
+    top: 21em;
+    left: 4em;
+    width: 16em;
+}
+
+#side {
+    margin-left: 5em;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    top: 21em;
+}
+
+#nav li {
+    font-size: 1.5em;
+}
+
+#nav a {
+    display: block;
+    color: $lightorange;
+    font-weight: bold;
+    text-decoration: none;
+    height: 1.7em;
+    line-height: 1.7em;
+    background-color: $witheorange;
+    margin-right: 1em;
+    margin-bottom: .2em;
+    padding-left: .5em;
+}
+
+#nav a:hover {
+    background-color: #FFF0E8;
+    color: #F28E39;
+}
+
+#nav .current {
+    border-left: solid 2px $darkorange;
+}
+
+#nav .current a {
+    color: $darkorange;
+}
+
+#main p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    margin-bottom: .6em;
+}
+
+#main a {
+    color: #CC6626;
+}
+
+#main h1 {
+    font-size: 1.7em;
+    font-weight: bold;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+
+#main h2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #999;
+    margin-bottom: .4em;
+    margin-top: 1em;
+}
+
+#main ol {
+    margin-bottom: .5em;
+}
+
+#main ol li {
+    list-style-type: decimal;
+    margin-left: 1.5em;
+    font-size: 1.5em;
+}
+#side{
+	div, p{
+		margin-bottom: 1em;
+	}
+}
+#side p {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    color: #666;
+}
+
+#side a {
+    color: #444;
+}
+code pre {
+    @include ui-button;
+	font-family: Consolas, monospace;
+	font-size: 14pt;
+    padding: 1em;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+#download a {
+    font-size: 2em;
+    font-weight: bold;
+	@include ui-button;
+}
+
+#footer {
+    text-align: center;
+    color: #888;
+    padding: 1em 0;
+    font-size: 1.1em;
+}
