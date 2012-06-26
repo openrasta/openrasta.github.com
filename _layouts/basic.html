@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+    <link href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css" rel="stylesheet" type="text/css" />
+    <link href="/site.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <link href="/ie.css" rel="Stylesheet" type="text/css" />
+    <![endif]-->
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+        </div>
+        <div id="main"> 
+            {{ content }}
+        </div>
+        {% include nav.html %}
+        {% include rightbar.html %}
+        <div id="footer">
+			&copy; 2007-2012 <a href="http://www.caffeine-it.com">Caffeine IT</a>, naughtyProd Ltd and <a href="http://www.ohloh.net/p/openrasta/contributors">contributors</a>
+			</div>
+    </div>
+</body>
+</html>
